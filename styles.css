@@ -1,0 +1,165 @@
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+  /* color*/
+  --clr-primary: #617d98;
+  --clr-title: #063251;
+  --clr-focused: #49a6e9;
+
+  /* background color */
+  --bg-primary:#f1f5f8;
+  --bg-focus:#dae2ec;
+  --bg-focus-hover:#c1daec;
+
+  /* font family */
+  --font-primary: "Open Sans", sans-serif;
+  --font-secondary: "Roboto", sans-serif;
+}
+ 
+/* global styles
+----------------- */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--bg-primary);
+  color: var(--clr-primary);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+h2,
+h3, h4 {
+  /* line-height: 1.25; */
+  margin-bottom: 0.75rem;
+  font-family: var(--font-secondary);
+  color: var(--clr-title);
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 1rem;
+}
+h4 {
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  font-weight: 400;
+}
+p {
+  margin-bottom: 3rem;
+  color:var(--clr-primary);
+}
+
+
+/* custom */
+
+.section-container{
+  max-width: 1280px;
+  padding: 16px;
+  margin: 48px auto 0;
+  text-align: center;
+}
+
+.sec-details{
+  display: grid;
+  grid-template-columns:1fr;
+  gap: 2rem;
+  margin-top: 64px;
+}
+#sec-img{
+  width: 100%;
+  border-radius: 8px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* section contents */
+.sec-contents{
+  background-color: #fff;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  text-align: justify;
+  border-radius: 8px;
+  min-height: 300px;
+}
+.tab-btns{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.tab-btn{
+  width: 100%;
+  padding: 8px 16px;
+  background-color: var(--bg-focus);
+  cursor: pointer;
+}
+.tab-btn:hover:not(.active){
+  color: var(--clr-focused);
+  padding: 8px 16px;
+  background-color: var(--bg-focus-hover);
+}
+.active{
+  background-color: #fff;
+  color:var(--clr-primary);
+}
+
+.tab-btns :nth-child(1){
+  border-top-left-radius: 8px;
+}
+.tab-btns :nth-child(3){
+  border-top-right-radius: 8px;
+}
+
+.tab-details{
+  padding:0 24px;
+}
+
+.hidden{
+  display: none;
+}
+
+
+
+
+/* large device */
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+
+
+  /* custom */
+  .section-container{
+    padding: 48px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .sec-details{
+    grid-template-columns:1fr 1fr;
+  }
+  
+}
+
+
+
+
+
+
